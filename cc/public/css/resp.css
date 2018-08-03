@@ -1,0 +1,19 @@
+/* @media mediaType and|not|only (media feature) {
+  
+} */
+@media screen and (max-width: 300px) {
+    body {
+        background-color:lightblue;
+    }
+    .red{
+        color:red;
+    }
+}
+@media screen and (min-width: 600px) {
+    body {
+        background-color:gray;
+    }
+    .red{
+        color:blue;
+    }
+}
