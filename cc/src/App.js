@@ -10,10 +10,13 @@ import LocalStorage from "./components/LocalStorage";
 import axios from "axios";
 import UserMedia from "./components/UserMedia";
 import Csstransition from "./components/Csstransition";
+import ParentComponent from "./components/PropTypes/parent/ParentComponent";
 import View1 from "./components/View1";
 import View2 from "./components/View2";
+import MotionComponent from "./components/MotionComponent";
 import { Route, BrowserRouter, Link } from "react-router-dom";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group"; // ES6
+import MainComponent from "./components/HOC/Main";
 class App extends Component {
   render() {
     axios
@@ -31,6 +34,7 @@ class App extends Component {
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
+          <MainComponent />
           {/* <Content />
         <Person />
         <RefComponent />
@@ -41,7 +45,8 @@ class App extends Component {
         <p>-------------------------------</p>
         <UserMedia /> */}
           {/* <Csstransition /> */}
-
+          <ParentComponent />
+          <MotionComponent />
           <div>
             <Link to="View1">View1</Link>
             <Link to="View2">View2</Link>
