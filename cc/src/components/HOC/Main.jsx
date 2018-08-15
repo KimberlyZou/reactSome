@@ -2,6 +2,9 @@ import React from "react";
 // (1)
 import HOCComponent from "./HOCComponent";
 class Main extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     return (
       <main>

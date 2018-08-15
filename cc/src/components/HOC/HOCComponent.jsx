@@ -1,8 +1,5 @@
 import React from "react";
 let getDisplayName = component => {
-  console.log(component.displayName);
-  console.log(component.name);
-  console.log("Component");
   return component.displayName || component.name || "Component";
 };
 export default PackageComponent => componentTitle =>
@@ -12,12 +9,15 @@ export default PackageComponent => componentTitle =>
     }
     static displayName = `HOC(${getDisplayName(PackageComponent)})`;
     render() {
+      const newProps = {
+        content: "这是内容"
+      };
       return (
         <div>
           <header>
             <h1>{componentTitle ? componentTitle : ""}</h1>
           </header>
-          <PackageComponent />
+          <PackageComponent {...newProps} />
         </div>
       );
     }
