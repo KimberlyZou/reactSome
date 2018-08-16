@@ -1,22 +1,24 @@
-import {combineReducers} from 'redux'
-import {content} from '../content'
+import { combineReducers } from "redux";
+import { content } from "../content";
 
-const initState={
-    name:'kimbrely'
-}
+const initState = {
+  name: "kimbrely"
+};
 
-function showAboutPerson(state=initState,action){
-    switch(action.type){
-        case content.SAVE_NAME:{
-            return Object.assign({},state,{name:action.name})
-        }
-        default:
-            return state
+function showAboutPerson(state = initState, action) {
+  switch (action.type) {
+    case content.SAVE_NAME: {
+      return Object.assign({}, state, { name: action.name });
     }
+    case content.UPDATE_NAME: {
+      return Object.assign({}, state, { name: action.name });
+    }
+    default:
+      return state;
+  }
 }
 const appReducer = combineReducers({
+  showAboutPerson
+});
 
-    showAboutPerson
-  })
-  
-  export default appReducer
+export default appReducer;
