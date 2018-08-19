@@ -17,6 +17,7 @@ import MotionComponent from "./components/MotionComponent";
 import { Route, BrowserRouter, Link } from "react-router-dom";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group"; // ES6
 import MainComponent from "./components/HOC/Main";
+import OrginComponent from './components/HOC3/OriginComponent'
 import OutNomalComponent from "./components/HOC2/OutNomalComponent";
 class App extends Component {
   render() {
@@ -24,7 +25,10 @@ class App extends Component {
       .get("https://api.github.com/users/KimberlyZou")
       .then(res => res.data)
       .then(res => console.log(res.login));
-
+    const la={
+      name:123,
+      say:"hello"
+    }
     return (
       <BrowserRouter>
         <div className="App">
@@ -35,7 +39,7 @@ class App extends Component {
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
-          <OutNomalComponent />
+          <OrginComponent {...la}/>
           {/* <MainComponent /> */}
           {/* <Content />
         <Person />

@@ -9,6 +9,7 @@ class Main extends React.Component {
     return (
       <main>
         <p>main content</p>
+        <p>{this.props.content}</p>
       </main>
     );
   }
