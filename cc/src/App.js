@@ -17,7 +17,7 @@ import MotionComponent from "./components/MotionComponent";
 import { Route, BrowserRouter, Link } from "react-router-dom";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group"; // ES6
 import MainComponent from "./components/HOC/Main";
-import OrginComponent from './components/HOC3/OriginComponent'
+import OrginComponent from './components/HOC3/OriginComponent2'
 import OutNomalComponent from "./components/HOC2/OutNomalComponent";
 class App extends Component {
   render() {
