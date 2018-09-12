@@ -17,18 +17,27 @@ import MotionComponent from "./components/MotionComponent";
 import { Route, BrowserRouter, Link } from "react-router-dom";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group"; // ES6
 import MainComponent from "./components/HOC/Main";
-import OrginComponent from './components/HOC3/OriginComponent2'
-import OutNomalComponent from "./components/HOC2/OutNomalComponent";
+import OrginComponent from "./components/HOC3/OriginComponent2";
+// import OutNomalComponent from "./components/HOC2/OutNomalComponent";
+import Zyy from "./components/Decorator/Decorator";
+import TryReduxComponent from "./components/TryReduxComponent/TryReduxComponent";
+import ReactCrouton from "./components/React-Crouton/ReactCrouton";
+
 class App extends Component {
   render() {
     axios
       .get("https://api.github.com/users/KimberlyZou")
       .then(res => res.data)
       .then(res => console.log(res.login));
-    const la={
-      name:123,
-      say:"hello"
-    }
+    const la = {
+      name: 123,
+      say: "hello"
+    };
+    // const test = new Zyy();
+
+    // test.aa = () => {
+    //   console.log(11);
+    // };
     return (
       <BrowserRouter>
         <div className="App">
@@ -39,7 +48,8 @@ class App extends Component {
           <p className="App-intro">
             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
-          <OrginComponent {...la}/>
+          <OrginComponent {...la} />
+
           {/* <MainComponent /> */}
           {/* <Content />
         <Person />
@@ -50,9 +60,10 @@ class App extends Component {
         <LocalStorage />
         <p>-------------------------------</p>
         <UserMedia /> */}
-          {/* <Csstransition /> */}
+          <ReactCrouton />
           <ParentComponent />
           <MotionComponent />
+          <TryReduxComponent />
           <div>
             <Link to="View1">View1</Link>
             <Link to="View2">View2</Link>

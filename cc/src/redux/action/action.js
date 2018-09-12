@@ -25,7 +25,18 @@ function receiveGet(arm, users) {
     arm: arm
   };
 }
-
+export function error(msg) {
+  return {
+    type: content.ERRPR_MSG,
+    msg: msg
+  };
+}
+export function disable(msg) {
+  return {
+    type: content.DISABLE,
+    msg: msg
+  };
+}
 export function fetchPosts(arm) {
   return function(dispatch) {
     dispatch(requestGet(arm));
